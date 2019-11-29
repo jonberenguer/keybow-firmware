@@ -181,6 +181,8 @@ function keybow.set_key(key, pressed)
 
         if shifted then
             hid_code = SHIFTED_KEYCODES:find(key, 1, true)
+	    keybow.set_modifier(keybow.LEFT_SHIFT, pressed)
+	    keybow_sleep(25)
         else
             hid_code = KEYCODES:find(key, 1, true)
         end
